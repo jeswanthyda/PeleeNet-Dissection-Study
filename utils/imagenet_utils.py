@@ -59,6 +59,7 @@ def load_data():
     for label in os.listdir(train_dir):
         for sample_dir in os.listdir(os.path.join(train_dir,label)):
             image = Image.open(os.path.join(train_dir,label,sample_dir))
+            image = image.convert('RGB')
             image = np.array(image.resize((224,224)))
             train_data.append(image)
             train_label.append(label)
@@ -67,6 +68,7 @@ def load_data():
     for label in os.listdir(val_dir):
         for sample_dir in os.listdir(os.path.join(val_dir,label)):
             image = Image.open(os.path.join(val_dir,label,sample_dir))
+            image = image.convert('RGB')
             image = np.array(image.resize((224,224)))
             val_data.append(image)
             val_label.append(label)
