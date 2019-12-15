@@ -8,9 +8,9 @@ This repo serves as the final project of the course **ECBM4040 at Columbia Unive
 - Ruturaj Rajendra Nene rn2494
 
 ### Recommended System Requirements to run this repo:
-CPU: Intel Skylake (16 vCPU)
-RAM: 104 GB
-GPU: Nvidia Tesla P100
+- CPU: Intel Skylake (16 vCPU)
+- RAM: 104 GB
+- GPU: Nvidia Tesla P100
 
 ### Instructions for running
 The two main notebooks that need to be run to train the spectrum of models (7 models in total, with PeeleNet at one end of the spectrum and DenseNet-41 on the other) on CIFAR10 and ImageNet respectively are:
