@@ -52,7 +52,7 @@ def dense_block(input_tensor, num_block, bottleneck_width, k, activation):
     This is two-way dense block i.e convolution blocks are present in both left and right paths.
     input_tensor = input to this block
     num_block = Number of dense layers in a dense_block
-    bottleneck_width = width of bottleneck (dynamic-->changes with dense layer within this block. else it will be constant)
+    bottleneck_width = width of bottleneck (dynamic-->changes with each stage or dense block. else it will be constant)
     k = growth rate (decides number of features/channels to extract)
     activation = post or pre decides convolution block operation(conv_bn_relu)
     '''
@@ -79,7 +79,7 @@ def dense_block_one_way_dynamic(input_tensor, num_block, bottleneck_width, k, ac
     This is one-way dense block i.e convolution blocks are present only in one of the left and right paths.
     input_tensor = input to this block
     num_block = Number of dense layers in a dense_block
-    bottleneck_width = width of bottleneck (dynamic-->changes with dense layer within this block. else it will be constant)
+    bottleneck_width = width of bottleneck (dynamic-->changes with each stage or dense block. else it will be constant)
     k = growth rate (decides number of features/channels to extract)
     activation = post or pre decides convolution block operation(conv_bn_relu)
     '''
