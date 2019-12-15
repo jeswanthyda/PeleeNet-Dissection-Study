@@ -3,9 +3,9 @@
 
 This repo serves as the final project of the course **ECBM4040 at Columbia University** for students - 
 
-Ujwal Dinesha ud2130
-Jeswanth Yadagani jy3012
-Ruturaj Rajendra Nene rn2494
+- Ujwal Dinesha ud2130
+- Jeswanth Yadagani jy3012
+- Ruturaj Rajendra Nene rn2494
 
 ### Recommended System Requirements to run this repo:
 CPU: Intel Skylake (16 vCPU)
