@@ -1,7 +1,7 @@
 # e4040-2019Fall-Project
 
 
-### This repo serves as the final project of the course **ECBM4040 at Columbia University** for students - 
+This repo serves as the final project of the course **ECBM4040 at Columbia University** for students - 
 
 Ujwal Dinesha ud2130
 Jeswanth Yadagani jy3012
