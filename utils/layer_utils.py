@@ -10,16 +10,15 @@ All the blocks/layers necessary to build different models are defined as functio
 
 
 def conv_bn_relu(input_tensor, ch, kernel, activation='post',padding="same", strides=1, weight_decay=5e-4):
-        '''
-        Depending on activation, convolution block is formed either as post activation or pre activation.
-        
-        input_tensor = input to this block
-        ch = Number of channels/features to extract from input_tensor
-        kernel = size of convolution kernel
-        activation = post for conv-->bn-->relu. else it will be relu-->bn-->conv
-        strides = stride of convolution kernel
-        weight_decay = regularization coefficient decay factor
-        '''
+    '''
+    Depending on activation, convolution block is formed either as post activation or pre activation.    
+    input_tensor = input to this block
+    ch = Number of channels/features to extract from input_tensor
+    kernel = size of convolution kernel
+    activation = post for conv-->bn-->relu. else it will be relu-->bn-->conv
+    strides = stride of convolution kernel
+    weight_decay = regularization coefficient decay factor
+    '''
     if activation=='post':
         x = layers.Conv2D(ch, kernel, padding=padding, strides=strides, kernel_regularizer=keras.regularizers.l2(weight_decay))(input_tensor)
         x = layers.BatchNormalization()(x)
