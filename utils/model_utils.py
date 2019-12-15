@@ -117,7 +117,7 @@ def model3(input_shape=(224,224,3),use_stem_block=False, k=32, block_config=[3,4
     return model
 
 def model2(input_shape=(224,224,3),use_stem_block=False, k=32, block_config=[3,4,8,3], out_layers = [128,256,512,704],bottleneck_width=[1,1,1,1],n_classes=198, activation='post'):
-     '''
+    '''
     (Bottleneck_width is maintained constant across all the stages and activation is changed to post)   
     input_shape = shape of input tensor
     use_stem_block = decide if stem block has to be used. (False from here)
@@ -145,7 +145,7 @@ def model2(input_shape=(224,224,3),use_stem_block=False, k=32, block_config=[3,4
     return model
 
 def model1(input_shape=(224,224,3),use_stem_block=False, k=32, block_config=[3,4,8,3], out_layers = [128,256,512,704],bottleneck_width=[2,2,2,2],n_classes=198, activation='pre'):
-     '''
+    '''
     (Activation is pre)   
     input_shape = shape of input tensor
     use_stem_block = decide if stem block has to be used. (False from here)
