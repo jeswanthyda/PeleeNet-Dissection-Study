@@ -1,26 +1,26 @@
 # e4040-2019Fall-Project
 
 
-###This repo serves as the final project of the course **ECBM4040 at Columbia University** for students - 
+### This repo serves as the final project of the course **ECBM4040 at Columbia University** for students - 
 
 Ujwal Dinesha ud2130
 Jeswanth Yadagani jy3012
 Ruturaj Rajendra Nene rn2494
 
-###Recommended System Requirements to run this repo:
+### Recommended System Requirements to run this repo:
 CPU: Intel Skylake (16 vCPU)
 RAM: 104 GB
 GPU: Nvidia Tesla P100
 
-###Instructions for running
+### Instructions for running
 The two main notebooks that need to be run to train the spectrum of models (7 models in total, with PeeleNet at one end of the spectrum and DenseNet-41 on the other) on CIFAR10 and ImageNet respectively are:
 1. Run_this_cifar10
 2. Run_this_imagenet
 
 *Note: Whenever we mention ImageNet in this repo, we are referring to the subset of ImageNet (containing 198 classes with almost 500 images per class) that was downloaded using https://github.com/mf1024/ImageNet-Datasets-Downloader*
 
-###File structure
-Repo:.
+### File structure
+Repo:.\n
 |   README.md
 |   requirements.txt (env dependancies)
 |   Run_this_cifar10.ipynb (train models on CIFAR10)
