@@ -1,21 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import _pickle as pickle
 import os
-import tarfile
-import glob
-import urllib.request as url
-import numpy as np
 import split_folders
 import numpy as np
 from PIL import Image
 
 def download_data():
     """
-    Download the CIFAR-10 data from the website, which is approximately 170MB.
-    The data (a .tar.gz file) will be store in the ./data/ folder.
-    :return: None
+    Download subset of imagenet dataset into './data' with almost 200 classes and around 500 images in each class
+    by scraping through URLs provided at http://image-net.org/. Work by Martins Frolovs 
+    (https://github.com/mf1024/ImageNet-Datasets-Downloader) has been used  and can be found in imagenet_download folder.
     """
     if not os.path.exists('./data'):
         os.mkdir('./data')
@@ -33,15 +28,14 @@ def download_data():
             
 def load_data():
     """
-    Unpack the CIFAR-10 dataset and load the datasets.
-    :param mode: 'train', or 'test', or 'all'. Specify the training set or test set, or load all the data.
-    :return: A tuple of data/labels, depending on the chosen mode. If 'train', return training data and labels;
-    If 'test' ,return test data and labels; If 'all', return both training and test sets.
+    Check if data has been downloaded and split it into train and val folders in './split_data' in 8:2 ratio.
+    Read each image in RGB format and resize it to (224,224,3) which is compatible to feed as input to network.
+    Returns train_data,train_label,val_data,val_label as numpy arrays.
     """
     # If the data hasn't been downloaded yet, download it first.
     if not os.path.exists('./data/imagenet_images'):
         download_data()
-    # Split data folder into test train and valid folders
+    # Split data folder into train and valid folders
     if not os.path.exists('./split_data'):    
         split_folders.ratio('./data/imagenet_images', output="./split_data", seed=1, ratio=(.8, .2))
     # Go to the location where the files are unpacked
@@ -51,7 +45,7 @@ def load_data():
     val_data = []
     val_label = []
     
-    #Load training data    
+    #Load training data and process to required format   
     val_dir = os.path.join(os.getcwd(),'split_data/val')
     
     train_dir = os.path.join(os.getcwd(),'split_data/train')
