@@ -20,9 +20,10 @@ The two main notebooks that need to be run to train the spectrum of models (7 mo
 *Note: Whenever we mention ImageNet in this repo, we are referring to the subset of ImageNet (containing 198 classes with almost 500 images per class) that was downloaded using https://github.com/mf1024/ImageNet-Datasets-Downloader*
 
 ### File structure
-Repo:. <br />
-|   README.md    <br />
-|   requirements.txt (env dependancies)<br />
+'''
+Repo:.
+|   README.md   
+|   requirements.txt (env dependancies)
 |   Run_this_cifar10.ipynb (train models on CIFAR10)
 |   Run_this_imagenet.ipynb (train models on ImageNet)
 |   
@@ -56,5 +57,5 @@ Repo:. <br />
         imagenet_utils.py (download and process ImageNet dataset)
         layer_utils.py (building blocks for model architecture)
         model_utils.py (formation of models)
-        
+'''        
 
