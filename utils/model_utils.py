@@ -72,7 +72,7 @@ def model3(input_shape=(224,224,3),use_stem_block=False, k=32, block_config=[3,4
     
     return model
 
-def model2(input_shape=(224,224,3),use_stem_block=False, k=32, block_config=[3,4,8,3], out_layers = [128,256,512,704],bottleneck_width=[8,8,8,8],n_classes=198, activation='post'):
+def model2(input_shape=(224,224,3),use_stem_block=False, k=32, block_config=[3,4,8,3], out_layers = [128,256,512,704],bottleneck_width=[1,1,1,1],n_classes=198, activation='post'):
     
     inputs = layers.Input(shape=input_shape)
     x=stem(inputs, activation) if use_stem_block else inputs
@@ -108,7 +108,7 @@ def model1(input_shape=(224,224,3),use_stem_block=False, k=32, block_config=[3,4
     
     return model
 
-def DenseNet41(input_shape=(224,224,3),use_stem_block=False, k=32, block_config=[3,4,8,3], out_layers = [128,256,512,704],bottleneck_width=[2,2,2,2],n_classes=198, activation='pre'):
+def DenseNet41(input_shape=(224,224,3),use_stem_block=False, k=32, block_config=[3,4,8,3], out_layers = [128,256,512,704],bottleneck_width=[4,4,4,4],n_classes=198, activation='pre'):
     
     inputs = layers.Input(shape=input_shape)
     x=stem(inputs, activation) if use_stem_block else inputs
