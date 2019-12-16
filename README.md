@@ -59,3 +59,6 @@ Repo:.
         model_utils.py (formation of models)
 ```        
 
+### Datasets
+- CIFAR10 dataset is a part of Keras library and will be loaded accordingly.
+- After running the second cell of 'Run_this_imagenet.ipynb' a subset of ImageNet with 198 classes will be downloaded into the 'data' folder and then copied into 'split_data' as train and validation batches.
